@@ -1,4 +1,7 @@
 import express from "express";
+
+import cors from "cors";
+
 import boardRoutes from "./routes/board.routes.js";
 import taskRoutes from "./routes/task.routes.js";
 import columnRouter from "./routes/column.routes.js";
@@ -15,6 +18,7 @@ import dotev from "dotenv";
 dotev.config();
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 
